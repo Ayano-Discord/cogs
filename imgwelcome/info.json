@@ -1,0 +1,26 @@
+{
+    "author" : [
+        "aikaterna"
+    ],
+    "description" : "Imgwelcome for Red v3.",
+    "disabled" : false,
+    "end_user_data_statement" : "This cog does not persistently store data or metadata about users.",
+    "hidden" : false,
+    "install_msg" : "Thanks for installing.",
+    
+    "min_bot_version" : "3.1.8",
+    "min_python_version" : [
+        3,
+        7,
+        0
+    ],
+    "name" : "",
+    "permissions" : [
+        "manage_messages"
+    ],
+    "required_cogs" : {},
+    "requirements" : [],
+    "short" : "Imgwelcome for Red v3.",
+    "tags" : [],
+    "type" : "COG"
+}

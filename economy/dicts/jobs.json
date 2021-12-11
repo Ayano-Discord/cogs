@@ -1,0 +1,36 @@
+{
+    "detective" : [
+        {
+            "name" : "detective",
+            "jobtext" : "{} You're a detective! Quick, memorize the sequence below!",
+            "success_string" : "",
+            "1" : ":three::six::seven::eight:",
+            "a1" : "3678",
+            "e1" : ":woman_detective:",
+            "2" : ":one::four::nine::six::eight:",
+            "a2" : "14968",
+            "e2" : ":woman_detective:", 
+            "3" : ":eight::one::two:seven::three:",
+            "a3" : "81273",
+            "e3" : ":woman_detective:", 
+            "timeout_string" : "You do your best trying to remember the sequence but you can't piece it together again. Your boss had to figure out the clues himself and didn't pay you."
+        }
+    ],
+    "chef" : [
+        {
+            "name" : "chef",
+            "jobtext" : ":woman_cook: You're a chef, and you're making some {}! Quick, memorize the ingredients below!\n\n*Send your answer as ingredient, ingrdient1...*",
+            "success_string" : "",
+            "1" : ":fish::cucumber::rice:",
+            "a1" : "fish, cucumber, rice",
+            "e1" : ":sushi",
+            "2" : ":tomato::cheese::bread::bacon:",
+            "a2" : "tomato, cheese, bread, bacon",
+            "e2" : ":sandwich:",
+            "3" : ":egg::leafy_green::tomato::bread:",
+            "a3" : "egg, lettuce, tomato, bread",
+            "e3" : ":taco:",
+            "timeout_string" : "You messed up the ingredients and the meal didn't come out right.Your boss ended up preparing the meal himself and didn't pay you anything."
+        }
+    ]
+}

@@ -1,0 +1,21 @@
+{
+    "author" : [
+        "Onii-Chan#3920",
+        "Fixator10#7133"
+    ],
+    "description" : "Utils for izumi",
+    "disabled" : false,
+    "end_user_data_statement" : "This cog does not persistently store data or metadata about users.",
+    "hidden" : false,
+    "install_msg" : "Thanks for installing",
+    
+    "min_bot_version" : "3.1.8",
+    "min_python_version" : [],
+    "name" : "izumitools",
+    "permissions" : [],
+    "required_cogs" : {},
+    "requirements" : [],
+    "short" : "Thanks for installing",
+    "tags" : [],
+    "type" : "COG"
+}

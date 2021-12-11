@@ -1,0 +1,181 @@
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"POT-Creation-Date: 2021-12-09 01:14+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: redgettext 3.3\n"
+
+#: /home/ubuntu/cogs/nqn/nqn.py:28
+#, docstring
+msgid "Use animated and custom emojis without discord nitro."
+msgstr ""
+
+#: /home/ubuntu/cogs/nqn/nqn.py:78
+#, docstring
+msgid "Base command to manage NotQuiteNitro settings."
+msgstr ""
+
+#: /home/ubuntu/cogs/nqn/nqn.py:83
+#, docstring
+msgid "Toggle animated emojis in this server."
+msgstr ""
+
+#: /home/ubuntu/cogs/nqn/nqn.py:87
+msgid "NQN is now enabled in this server."
+msgstr ""
+
+#: /home/ubuntu/cogs/nqn/nqn.py:91
+msgid "NQN is now disabled in this server."
+msgstr ""
+
+#: /home/ubuntu/cogs/nqn/nqn.py:99
+#, docstring
+msgid ""
+"Add a channel to the list of channels to ignore NQN.\n"
+"\n"
+"        **Examples**\n"
+"        - `[p]nqnset ignorechannel #testing`\n"
+"        This will add #testing to the list of ignored channels.\n"
+"\n"
+"        - `[p]nqnset ignorechannel 133251234164375552`\n"
+"        This will add #testing to the list of ignored channels.\n"
+"\n"
+"        **Arguments**\n"
+"        - `[channel]` - The channel to ignore. Leave empty to set as the current channel.\n"
+"        "
+msgstr ""
+
+#: /home/ubuntu/cogs/nqn/nqn.py:119
+msgid "{c} is now ignored by NQN"
+msgstr ""
+
+#: /home/ubuntu/cogs/nqn/nqn.py:124
+msgid "{c} is already ignored by NQN!"
+msgstr ""
+
+#: /home/ubuntu/cogs/nqn/nqn.py:133
+#, docstring
+msgid ""
+"Remove a channel from the list of channels to ignore NQN.\n"
+"\n"
+"        **Examples**\n"
+"        - `[p]nqnset unignorechannel #testing`\n"
+"        This will remove #testing from the list of ignored channels.\n"
+"\n"
+"        - `[p]nqnset unignorechannel 133251234164375552`\n"
+"        This will remove #testing from the list of ignored channels.\n"
+"\n"
+"        **Arguments**\n"
+"        - `[channel]` - The channel to unignore. Leave empty to set as the current channel.\n"
+"        "
+msgstr ""
+
+#: /home/ubuntu/cogs/nqn/nqn.py:153
+msgid "{c} is not ignored by NQN now"
+msgstr ""
+
+#: /home/ubuntu/cogs/nqn/nqn.py:158
+msgid "{c} is not ignored by NQN!"
+msgstr ""
+
+#: /home/ubuntu/cogs/nqn/nqn.py:163
+#, docstring
+msgid ""
+"Add a user to the list of users to get ignored by NQN.\n"
+"\n"
+"        **Examples**\n"
+"        - `[p]nqnset ignoreuser @GhOsT`\n"
+"        This will add GhOsT to the list of ignored users.\n"
+"\n"
+"        - `[p]nqnset ignoreuser 722168161713127435`\n"
+"        This will add GhOsT to the list of ignored users.\n"
+"\n"
+"        **Arguments**\n"
+"        - `<user>` - The user to ignore. You can mention them or give their id.\n"
+"        "
+msgstr ""
+
+#: /home/ubuntu/cogs/nqn/nqn.py:179
+msgid "{u} is now ignored by NQN"
+msgstr ""
+
+#: /home/ubuntu/cogs/nqn/nqn.py:182
+msgid "{u} is already ignored by NQN!"
+msgstr ""
+
+#: /home/ubuntu/cogs/nqn/nqn.py:188
+#, docstring
+msgid ""
+"Remove a user from the list of users to get ignored by NQN.\n"
+"\n"
+"        **Examples**\n"
+"        - `[p]nqnset unignoreuser @GhOsT`\n"
+"        This will remove GhOsT from the list of ignored users.\n"
+"\n"
+"        - `[p]nqnset unignoreuser 722168161713127435`\n"
+"        This will remove GhOsT from the list of ignored users.\n"
+"\n"
+"        **Arguments**\n"
+"        - `<user>` - The user to unignore. You can mention them or give their id.\n"
+"        "
+msgstr ""
+
+#: /home/ubuntu/cogs/nqn/nqn.py:204
+msgid "{u} is not ignored by NQN now"
+msgstr ""
+
+#: /home/ubuntu/cogs/nqn/nqn.py:207
+msgid "{u} is not ignored by NQN!"
+msgstr ""
+
+#: /home/ubuntu/cogs/nqn/nqn.py:212
+#, docstring
+msgid "Clear all the NQN settings for this server."
+msgstr ""
+
+#: /home/ubuntu/cogs/nqn/nqn.py:215
+msgid "There is nothing to clear in the settings!"
+msgstr ""
+
+#: /home/ubuntu/cogs/nqn/nqn.py:219
+msgid "Do you want to clear the NQN settings for this server?"
+msgstr ""
+
+#: /home/ubuntu/cogs/nqn/nqn.py:230
+msgid "Successfully cleared the settings!"
+msgstr ""
+
+#: /home/ubuntu/cogs/nqn/nqn.py:235
+msgid "Okay, not clearing the settings today..."
+msgstr ""
+
+#: /home/ubuntu/cogs/nqn/nqn.py:238
+msgid "Timed out, try again later..."
+msgstr ""
+
+#: /home/ubuntu/cogs/nqn/nqn.py:242
+#, docstring
+msgid "Shows the NQN settings for this server."
+msgstr ""
+
+#: /home/ubuntu/cogs/nqn/nqn.py:253
+msgid "Yes."
+msgstr ""
+
+#: /home/ubuntu/cogs/nqn/nqn.py:253
+msgid "No."
+msgstr ""
+
+#: /home/ubuntu/cogs/nqn/nqn.py:254 /home/ubuntu/cogs/nqn/nqn.py:255
+msgid "None."
+msgstr ""
+
+#: /home/ubuntu/cogs/nqn/nqn.py:258
+msgid "NQN Settings"
+msgstr ""

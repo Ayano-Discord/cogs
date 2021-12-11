@@ -1,0 +1,51 @@
+# Future Imports
+from __future__ import annotations
+
+# Standard Library Imports
+from abc import ABC
+from typing import Final, Optional
+import logging
+import re
+import struct
+
+# Dependency Imports
+import aiohttp
+
+# Music Imports
+from ..abc import MixinMeta
+from ..cog_utils import CompositeMetaClass
+
+log = logging.getLogger("red.cogs.Music.cog.Utilities.Parsing")
+
+STREAM_TITLE: Final[re.Pattern] = re.compile(br"StreamTitle='([^']*)';")
+
+
+class ParsingUtilities(MixinMeta, ABC, metaclass=CompositeMetaClass):
+    async def icyparser(self, url: str) -> Optional[str]:
+        try:
+            async with self.session.get(
+                url, headers={"Icy-MetaData": "1"}
+            ) as resp:
+                metaint = int(resp.headers["icy-metaint"])
+                for _ in range(5):
+                    await resp.content.readexactly(metaint)
+                    metadata_length = (
+                        struct.unpack("B", await resp.content.readexactly(1))[
+                            0
+                        ]
+                        * 16
+                    )
+                    metadata = await resp.content.readexactly(metadata_length)
+                    m = re.search(STREAM_TITLE, metadata.rstrip(b"\0"))
+                    if not m:
+                        return None
+                    title = m.group(1)
+                    if title:
+                        title = title.decode("utf-8", errors="replace")
+                        return title
+        except (
+            KeyError,
+            aiohttp.ClientConnectionError,
+            aiohttp.ClientResponseError,
+        ):
+            return None

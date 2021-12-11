@@ -1,0 +1,196 @@
+INFO:/home/ubuntu/cogs/.utils/utils.py:/home/ubuntu/cogs
+ERROR:/home/ubuntu/cogs/.utils/utils.py:Error reading info.json in space
+Traceback (most recent call last):
+  File "/home/ubuntu/cogs/.utils/utils.py", line 181, in mass_fix
+    with open(f"{ROOT}/{folder}/info.json", "r") as infile:
+FileNotFoundError: [Errno 2] No such file or directory: '/home/ubuntu/cogs/space/info.json'
+ERROR:/home/ubuntu/cogs/.utils/utils.py:Error reading info.json in README.md
+Traceback (most recent call last):
+  File "/home/ubuntu/cogs/.utils/utils.py", line 181, in mass_fix
+    with open(f"{ROOT}/{folder}/info.json", "r") as infile:
+NotADirectoryError: [Errno 20] Not a directory: '/home/ubuntu/cogs/README.md/info.json'
+ERROR:/home/ubuntu/cogs/.utils/utils.py:Error reading info.json in ytdl
+Traceback (most recent call last):
+  File "/home/ubuntu/cogs/.utils/utils.py", line 181, in mass_fix
+    with open(f"{ROOT}/{folder}/info.json", "r") as infile:
+FileNotFoundError: [Errno 2] No such file or directory: '/home/ubuntu/cogs/ytdl/info.json'
+ERROR:/home/ubuntu/cogs/.utils/utils.py:Error reading info.json in make.bat
+Traceback (most recent call last):
+  File "/home/ubuntu/cogs/.utils/utils.py", line 181, in mass_fix
+    with open(f"{ROOT}/{folder}/info.json", "r") as infile:
+NotADirectoryError: [Errno 20] Not a directory: '/home/ubuntu/cogs/make.bat/info.json'
+ERROR:/home/ubuntu/cogs/.utils/utils.py:Error reading info.json in badges.json
+Traceback (most recent call last):
+  File "/home/ubuntu/cogs/.utils/utils.py", line 181, in mass_fix
+    with open(f"{ROOT}/{folder}/info.json", "r") as infile:
+NotADirectoryError: [Errno 20] Not a directory: '/home/ubuntu/cogs/badges.json/info.json'
+ERROR:/home/ubuntu/cogs/.utils/utils.py:Error reading info.json in dbl
+Traceback (most recent call last):
+  File "/home/ubuntu/cogs/.utils/utils.py", line 181, in mass_fix
+    with open(f"{ROOT}/{folder}/info.json", "r") as infile:
+FileNotFoundError: [Errno 2] No such file or directory: '/home/ubuntu/cogs/dbl/info.json'
+ERROR:/home/ubuntu/cogs/.utils/utils.py:Error reading info.json in settings copy.json
+Traceback (most recent call last):
+  File "/home/ubuntu/cogs/.utils/utils.py", line 181, in mass_fix
+    with open(f"{ROOT}/{folder}/info.json", "r") as infile:
+NotADirectoryError: [Errno 20] Not a directory: '/home/ubuntu/cogs/settings copy.json/info.json'
+ERROR:/home/ubuntu/cogs/.utils/utils.py:Error reading info.json in ttt
+Traceback (most recent call last):
+  File "/home/ubuntu/cogs/.utils/utils.py", line 181, in mass_fix
+    with open(f"{ROOT}/{folder}/info.json", "r") as infile:
+FileNotFoundError: [Errno 2] No such file or directory: '/home/ubuntu/cogs/ttt/info.json'
+ERROR:/home/ubuntu/cogs/.utils/utils.py:Error reading info.json in elements
+Traceback (most recent call last):
+  File "/home/ubuntu/cogs/.utils/utils.py", line 181, in mass_fix
+    with open(f"{ROOT}/{folder}/info.json", "r") as infile:
+FileNotFoundError: [Errno 2] No such file or directory: '/home/ubuntu/cogs/elements/info.json'
+ERROR:/home/ubuntu/cogs/.utils/utils.py:Error reading info.json in wmusic
+Traceback (most recent call last):
+  File "/home/ubuntu/cogs/.utils/utils.py", line 181, in mass_fix
+    with open(f"{ROOT}/{folder}/info.json", "r") as infile:
+FileNotFoundError: [Errno 2] No such file or directory: '/home/ubuntu/cogs/wmusic/info.json'
+ERROR:/home/ubuntu/cogs/.utils/utils.py:Error reading info.json in mod
+Traceback (most recent call last):
+  File "/home/ubuntu/cogs/.utils/utils.py", line 181, in mass_fix
+    with open(f"{ROOT}/{folder}/info.json", "r") as infile:
+FileNotFoundError: [Errno 2] No such file or directory: '/home/ubuntu/cogs/mod/info.json'
+ERROR:/home/ubuntu/cogs/.utils/utils.py:Error reading info.json in gacha
+Traceback (most recent call last):
+  File "/home/ubuntu/cogs/.utils/utils.py", line 181, in mass_fix
+    with open(f"{ROOT}/{folder}/info.json", "r") as infile:
+FileNotFoundError: [Errno 2] No such file or directory: '/home/ubuntu/cogs/gacha/info.json'
+ERROR:/home/ubuntu/cogs/.utils/utils.py:Error reading info.json in testmenus
+Traceback (most recent call last):
+  File "/home/ubuntu/cogs/.utils/utils.py", line 181, in mass_fix
+    with open(f"{ROOT}/{folder}/info.json", "r") as infile:
+FileNotFoundError: [Errno 2] No such file or directory: '/home/ubuntu/cogs/testmenus/info.json'
+ERROR:/home/ubuntu/cogs/.utils/utils.py:Error reading info.json in Makefile
+Traceback (most recent call last):
+  File "/home/ubuntu/cogs/.utils/utils.py", line 181, in mass_fix
+    with open(f"{ROOT}/{folder}/info.json", "r") as infile:
+NotADirectoryError: [Errno 20] Not a directory: '/home/ubuntu/cogs/Makefile/info.json'
+ERROR:/home/ubuntu/cogs/.utils/utils.py:Error reading info.json in audio
+Traceback (most recent call last):
+  File "/home/ubuntu/cogs/.utils/utils.py", line 181, in mass_fix
+    with open(f"{ROOT}/{folder}/info.json", "r") as infile:
+FileNotFoundError: [Errno 2] No such file or directory: '/home/ubuntu/cogs/audio/info.json'
+ERROR:/home/ubuntu/cogs/.utils/utils.py:Error reading info.json in badgelinks.json
+Traceback (most recent call last):
+  File "/home/ubuntu/cogs/.utils/utils.py", line 181, in mass_fix
+    with open(f"{ROOT}/{folder}/info.json", "r") as infile:
+NotADirectoryError: [Errno 20] Not a directory: '/home/ubuntu/cogs/badgelinks.json/info.json'
+ERROR:/home/ubuntu/cogs/.utils/utils.py:Error reading info.json in scripts.log
+Traceback (most recent call last):
+  File "/home/ubuntu/cogs/.utils/utils.py", line 181, in mass_fix
+    with open(f"{ROOT}/{folder}/info.json", "r") as infile:
+NotADirectoryError: [Errno 20] Not a directory: '/home/ubuntu/cogs/scripts.log/info.json'
+ERROR:/home/ubuntu/cogs/.utils/utils.py:Error reading info.json in music
+Traceback (most recent call last):
+  File "/home/ubuntu/cogs/.utils/utils.py", line 181, in mass_fix
+    with open(f"{ROOT}/{folder}/info.json", "r") as infile:
+FileNotFoundError: [Errno 2] No such file or directory: '/home/ubuntu/cogs/music/info.json'
+ERROR:/home/ubuntu/cogs/.utils/utils.py:Error reading info.json in screenshot
+Traceback (most recent call last):
+  File "/home/ubuntu/cogs/.utils/utils.py", line 181, in mass_fix
+    with open(f"{ROOT}/{folder}/info.json", "r") as infile:
+FileNotFoundError: [Errno 2] No such file or directory: '/home/ubuntu/cogs/screenshot/info.json'
+ERROR:/home/ubuntu/cogs/.utils/utils.py:Error reading info.json in LeagueOfLegends
+Traceback (most recent call last):
+  File "/home/ubuntu/cogs/.utils/utils.py", line 181, in mass_fix
+    with open(f"{ROOT}/{folder}/info.json", "r") as infile:
+FileNotFoundError: [Errno 2] No such file or directory: '/home/ubuntu/cogs/LeagueOfLegends/info.json'
+ERROR:/home/ubuntu/cogs/.utils/utils.py:Error reading info.json in tox.ini
+Traceback (most recent call last):
+  File "/home/ubuntu/cogs/.utils/utils.py", line 181, in mass_fix
+    with open(f"{ROOT}/{folder}/info.json", "r") as infile:
+NotADirectoryError: [Errno 20] Not a directory: '/home/ubuntu/cogs/tox.ini/info.json'
+ERROR:/home/ubuntu/cogs/.utils/utils.py:Error reading info.json in economy
+Traceback (most recent call last):
+  File "/home/ubuntu/cogs/.utils/utils.py", line 181, in mass_fix
+    with open(f"{ROOT}/{folder}/info.json", "r") as infile:
+FileNotFoundError: [Errno 2] No such file or directory: '/home/ubuntu/cogs/economy/info.json'
+ERROR:/home/ubuntu/cogs/.utils/utils.py:Error reading info.json in otherbot
+Traceback (most recent call last):
+  File "/home/ubuntu/cogs/.utils/utils.py", line 181, in mass_fix
+    with open(f"{ROOT}/{folder}/info.json", "r") as infile:
+FileNotFoundError: [Errno 2] No such file or directory: '/home/ubuntu/cogs/otherbot/info.json'
+ERROR:/home/ubuntu/cogs/.utils/utils.py:Error reading info.json in stats
+Traceback (most recent call last):
+  File "/home/ubuntu/cogs/.utils/utils.py", line 181, in mass_fix
+    with open(f"{ROOT}/{folder}/info.json", "r") as infile:
+FileNotFoundError: [Errno 2] No such file or directory: '/home/ubuntu/cogs/stats/info.json'
+ERROR:/home/ubuntu/cogs/.utils/utils.py:Error reading info.json in anime
+Traceback (most recent call last):
+  File "/home/ubuntu/cogs/.utils/utils.py", line 181, in mass_fix
+    with open(f"{ROOT}/{folder}/info.json", "r") as infile:
+FileNotFoundError: [Errno 2] No such file or directory: '/home/ubuntu/cogs/anime/info.json'
+ERROR:/home/ubuntu/cogs/.utils/utils.py:Error reading info.json in on_connect
+Traceback (most recent call last):
+  File "/home/ubuntu/cogs/.utils/utils.py", line 181, in mass_fix
+    with open(f"{ROOT}/{folder}/info.json", "r") as infile:
+FileNotFoundError: [Errno 2] No such file or directory: '/home/ubuntu/cogs/on_connect/info.json'
+ERROR:/home/ubuntu/cogs/.utils/utils.py:Error reading info.json in slashcmd
+Traceback (most recent call last):
+  File "/home/ubuntu/cogs/.utils/utils.py", line 181, in mass_fix
+    with open(f"{ROOT}/{folder}/info.json", "r") as infile:
+FileNotFoundError: [Errno 2] No such file or directory: '/home/ubuntu/cogs/slashcmd/info.json'
+ERROR:/home/ubuntu/cogs/.utils/utils.py:Error reading info.json in aki
+Traceback (most recent call last):
+  File "/home/ubuntu/cogs/.utils/utils.py", line 181, in mass_fix
+    with open(f"{ROOT}/{folder}/info.json", "r") as infile:
+FileNotFoundError: [Errno 2] No such file or directory: '/home/ubuntu/cogs/aki/info.json'
+ERROR:/home/ubuntu/cogs/.utils/utils.py:Error reading info.json in crowdin.yml
+Traceback (most recent call last):
+  File "/home/ubuntu/cogs/.utils/utils.py", line 181, in mass_fix
+    with open(f"{ROOT}/{folder}/info.json", "r") as infile:
+NotADirectoryError: [Errno 20] Not a directory: '/home/ubuntu/cogs/crowdin.yml/info.json'
+ERROR:/home/ubuntu/cogs/.utils/utils.py:Error reading info.json in tools
+Traceback (most recent call last):
+  File "/home/ubuntu/cogs/.utils/utils.py", line 181, in mass_fix
+    with open(f"{ROOT}/{folder}/info.json", "r") as infile:
+FileNotFoundError: [Errno 2] No such file or directory: '/home/ubuntu/cogs/tools/info.json'
+ERROR:/home/ubuntu/cogs/.utils/utils.py:Error reading info.json in pyproject.toml
+Traceback (most recent call last):
+  File "/home/ubuntu/cogs/.utils/utils.py", line 181, in mass_fix
+    with open(f"{ROOT}/{folder}/info.json", "r") as infile:
+NotADirectoryError: [Errno 20] Not a directory: '/home/ubuntu/cogs/pyproject.toml/info.json'
+ERROR:/home/ubuntu/cogs/.utils/utils.py:Error reading info.json in thelp
+Traceback (most recent call last):
+  File "/home/ubuntu/cogs/.utils/utils.py", line 181, in mass_fix
+    with open(f"{ROOT}/{folder}/info.json", "r") as infile:
+FileNotFoundError: [Errno 2] No such file or directory: '/home/ubuntu/cogs/thelp/info.json'
+ERROR:/home/ubuntu/cogs/.utils/utils.py:Error reading info.json in old_music
+Traceback (most recent call last):
+  File "/home/ubuntu/cogs/.utils/utils.py", line 181, in mass_fix
+    with open(f"{ROOT}/{folder}/info.json", "r") as infile:
+FileNotFoundError: [Errno 2] No such file or directory: '/home/ubuntu/cogs/old_music/info.json'
+ERROR:/home/ubuntu/cogs/.utils/utils.py:Error reading info.json in roles.json
+Traceback (most recent call last):
+  File "/home/ubuntu/cogs/.utils/utils.py", line 181, in mass_fix
+    with open(f"{ROOT}/{folder}/info.json", "r") as infile:
+NotADirectoryError: [Errno 20] Not a directory: '/home/ubuntu/cogs/roles.json/info.json'
+ERROR:/home/ubuntu/cogs/.utils/utils.py:Error reading info.json in giveaway
+Traceback (most recent call last):
+  File "/home/ubuntu/cogs/.utils/utils.py", line 181, in mass_fix
+    with open(f"{ROOT}/{folder}/info.json", "r") as infile:
+FileNotFoundError: [Errno 2] No such file or directory: '/home/ubuntu/cogs/giveaway/info.json'
+ERROR:/home/ubuntu/cogs/.utils/utils.py:Error reading info.json in make.ps1
+Traceback (most recent call last):
+  File "/home/ubuntu/cogs/.utils/utils.py", line 181, in mass_fix
+    with open(f"{ROOT}/{folder}/info.json", "r") as infile:
+NotADirectoryError: [Errno 20] Not a directory: '/home/ubuntu/cogs/make.ps1/info.json'
+ERROR:/home/ubuntu/cogs/.utils/utils.py:Error reading info.json in premium
+Traceback (most recent call last):
+  File "/home/ubuntu/cogs/.utils/utils.py", line 181, in mass_fix
+    with open(f"{ROOT}/{folder}/info.json", "r") as infile:
+FileNotFoundError: [Errno 2] No such file or directory: '/home/ubuntu/cogs/premium/info.json'
+ERROR:/home/ubuntu/cogs/.utils/utils.py:Error reading info.json in away
+Traceback (most recent call last):
+  File "/home/ubuntu/cogs/.utils/utils.py", line 181, in mass_fix
+    with open(f"{ROOT}/{folder}/info.json", "r") as infile:
+FileNotFoundError: [Errno 2] No such file or directory: '/home/ubuntu/cogs/away/info.json'
+ERROR:/home/ubuntu/cogs/.utils/utils.py:Error reading info.json in nsfw
+Traceback (most recent call last):
+  File "/home/ubuntu/cogs/.utils/utils.py", line 181, in mass_fix
+    with open(f"{ROOT}/{folder}/info.json", "r") as infile:
+FileNotFoundError: [Errno 2] No such file or directory: '/home/ubuntu/cogs/nsfw/info.json'

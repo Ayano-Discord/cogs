@@ -1,0 +1,47 @@
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"POT-Creation-Date: 2021-12-09 01:13+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: redgettext 3.3\n"
+
+#: /home/ubuntu/cogs/dbl/dbl.py:70
+#, docstring
+msgid "Discord bot list commands"
+msgstr ""
+
+#: /home/ubuntu/cogs/dbl/dbl.py:74
+#, docstring
+msgid "Fatelist commands"
+msgstr ""
+
+#: /home/ubuntu/cogs/dbl/dbl.py:195
+#, docstring
+msgid "Only takes user ids"
+msgstr ""
+
+#: /home/ubuntu/cogs/dbl/dbl.py:223
+#, docstring
+msgid "Vote through the bot"
+msgstr ""
+
+#: /home/ubuntu/cogs/dbl/dbl.py:263
+#, docstring
+msgid "Review through the bot"
+msgstr ""
+
+#: /home/ubuntu/cogs/dbl/dbl.py:294
+#, docstring
+msgid "Check if the user has voted or not"
+msgstr ""
+
+#: /home/ubuntu/cogs/dbl/dbl.py:384
+#, docstring
+msgid "Vote For Izumi And Earn Rewards"
+msgstr ""

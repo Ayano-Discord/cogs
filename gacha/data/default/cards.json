@@ -1,0 +1,152 @@
+{
+  "normal" : [
+    {
+      "name" : "Inugami Korone",
+      "series":  "Hololive Gamers",
+      "image":  "https://vignette.wikia.nocookie.net/virtualyoutuber/images/0/05/Inugami_Korone_img.png/",
+      "birthday": "October 1",
+      "quote": "'Yubi Yubi!'"
+    },
+    {
+      "name" : "Nekomata Okayu",
+      "series":  "Hololive Gamers",
+      "image":  "https://vignette.wikia.nocookie.net/virtualyoutuber/images/3/35/Nekomata_Okayu_img.png/",
+      "birthday": "February 22",
+      "quote": "'Mogu mogu, Okayu!'"
+    },
+    {
+      "name": "Shirakami Fubuki",
+      "series":  "Hololive Gen 1",
+      "image":  "https://vignette.wikia.nocookie.net/virtualyoutuber/images/e/e8/Shirakami_Fubuki_Portrait.jpg/",
+      "birthday": "October 5",
+      "quote": "'I'm a scatman'"
+    },
+    {
+      "name" : "Hoshimachi Suisei",
+      "series":  "Hololive Gen 0",
+      "image":  "https://vignette.wikia.nocookie.net/virtualyoutuber/images/8/8b/Hoshimachi_Suisei_2019_Portrait.png/",
+      "birthday": "March 22",
+      "quote": "'Konmachi'"
+    }
+  ],
+    "rare" : [
+    {
+      "name" : "Inugami Korone",
+      "series":  "Hololive Gamers",
+      "image":  "https://vignette.wikia.nocookie.net/virtualyoutuber/images/0/05/Inugami_Korone_img.png/",
+      "birthday": "October 1",
+      "quote": "'Yubi Yubi!'"
+    },
+    {
+      "name" : "Nekomata Okayu",
+      "series":  "Hololive Gamers",
+      "image":  "https://vignette.wikia.nocookie.net/virtualyoutuber/images/3/35/Nekomata_Okayu_img.png/",
+      "birthday": "February 22",
+      "quote": "'Mogu mogu, Okayu!'"
+    },
+    {
+      "name": "Shirakami Fubuki",
+      "series":  "Hololive Gen 1",
+      "image":  "https://vignette.wikia.nocookie.net/virtualyoutuber/images/e/e8/Shirakami_Fubuki_Portrait.jpg/",
+      "birthday": "October 5",
+      "quote": "'I'm a scatman'"
+    },
+    {
+      "name" : "Hoshimachi Suisei",
+      "series":  "Hololive Gen 0",
+      "image":  "https://vignette.wikia.nocookie.net/virtualyoutuber/images/8/8b/Hoshimachi_Suisei_2019_Portrait.png/",
+      "birthday": "March 22",
+      "quote": "'Konmachi'"
+    }
+  ],
+    "super rare" : [
+    {
+      "name" : "Inugami Korone",
+      "series":  "Hololive Gamers",
+      "image":  "https://vignette.wikia.nocookie.net/virtualyoutuber/images/0/05/Inugami_Korone_img.png/",
+      "birthday": "October 1",
+      "quote": "'Yubi Yubi!'"
+    },
+    {
+      "name" : "Nekomata Okayu",
+      "series":  "Hololive Gamers",
+      "image":  "https://vignette.wikia.nocookie.net/virtualyoutuber/images/3/35/Nekomata_Okayu_img.png/",
+      "birthday": "February 22",
+      "quote": "'Mogu mogu, Okayu!'"
+    },
+    {
+      "name": "Shirakami Fubuki",
+      "series":  "Hololive Gen 1",
+      "image":  "https://vignette.wikia.nocookie.net/virtualyoutuber/images/e/e8/Shirakami_Fubuki_Portrait.jpg/",
+      "birthday": "October 5",
+      "quote": "'I'm a scatman'"
+    },
+    {
+      "name" : "Hoshimachi Suisei",
+      "series":  "Hololive Gen 0",
+      "image":  "https://vignette.wikia.nocookie.net/virtualyoutuber/images/8/8b/Hoshimachi_Suisei_2019_Portrait.png/",
+      "birthday": "March 22",
+      "quote": "'Konmachi'"
+    }
+  ],
+    "super super rare" : [
+    {
+      "name" : "Inugami Korone",
+      "series":  "Hololive Gamers",
+      "image":  "https://vignette.wikia.nocookie.net/virtualyoutuber/images/0/05/Inugami_Korone_img.png/",
+      "birthday": "October 1",
+      "quote": "'Yubi Yubi!'"
+    },
+    {
+      "name" : "Nekomata Okayu",
+      "series":  "Hololive Gamers",
+      "image":  "https://vignette.wikia.nocookie.net/virtualyoutuber/images/3/35/Nekomata_Okayu_img.png/",
+      "birthday": "February 22",
+      "quote": "'Mogu mogu, Okayu!'"
+    },
+    {
+      "name": "Shirakami Fubuki",
+      "series":  "Hololive Gen 1",
+      "image":  "https://vignette.wikia.nocookie.net/virtualyoutuber/images/e/e8/Shirakami_Fubuki_Portrait.jpg/",
+      "birthday": "October 5",
+      "quote": "'I'm a scatman'"
+    },
+    {
+      "name" : "Hoshimachi Suisei",
+      "series":  "Hololive Gen 0",
+      "image":  "https://vignette.wikia.nocookie.net/virtualyoutuber/images/8/8b/Hoshimachi_Suisei_2019_Portrait.png/",
+      "birthday": "March 22",
+      "quote": "'Konmachi'"
+    }
+  ],
+    "ultra rare" : [
+    {
+      "name" : "Inugami Korone",
+      "series":  "Hololive Gamers",
+      "image":  "https://vignette.wikia.nocookie.net/virtualyoutuber/images/0/05/Inugami_Korone_img.png/",
+      "birthday": "October 1",
+      "quote": "'Yubi Yubi!'"
+    },
+    {
+      "name" : "Nekomata Okayu",
+      "series":  "Hololive Gamers",
+      "image":  "https://vignette.wikia.nocookie.net/virtualyoutuber/images/3/35/Nekomata_Okayu_img.png/",
+      "birthday": "February 22",
+      "quote": "'Mogu mogu, Okayu!'"
+    },
+    {
+      "name": "Shirakami Fubuki",
+      "series":  "Hololive Gen 1",
+      "image":  "https://vignette.wikia.nocookie.net/virtualyoutuber/images/e/e8/Shirakami_Fubuki_Portrait.jpg/",
+      "birthday": "October 5",
+      "quote": "'I'm a scatman'"
+    },
+    {
+      "name" : "Hoshimachi Suisei",
+      "series":  "Hololive Gen 0",
+      "image":  "https://vignette.wikia.nocookie.net/virtualyoutuber/images/8/8b/Hoshimachi_Suisei_2019_Portrait.png/",
+      "birthday": "March 22",
+      "quote": "'Konmachi'"
+    }
+  ]
+}

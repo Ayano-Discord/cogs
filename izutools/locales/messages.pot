@@ -1,0 +1,234 @@
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"POT-Creation-Date: 2021-12-09 01:13+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: redgettext 3.3\n"
+
+#: /home/ubuntu/cogs/izutools/izutools.py:81
+#, docstring
+msgid "general commands for izumi"
+msgstr ""
+
+#: /home/ubuntu/cogs/izutools/izutools.py:118
+#, docstring
+msgid ""
+"Choose between multiple options.\n"
+"        There must be at least 2 options to pick from.\n"
+"        Options are separated by spaces.\n"
+"        To denote options which include whitespace, you should enclose the options in double quotes.\n"
+"        "
+msgstr ""
+
+#: /home/ubuntu/cogs/izutools/izutools.py:125
+msgid "Not enough options to pick from."
+msgstr ""
+
+#: /home/ubuntu/cogs/izutools/izutools.py:285
+#, docstring
+msgid "Info about izumi"
+msgstr ""
+
+#: /home/ubuntu/cogs/izutools/izutools.py:360
+msgid "shards"
+msgstr ""
+
+#: /home/ubuntu/cogs/izutools/izutools.py:360
+msgid "shard"
+msgstr ""
+
+#: /home/ubuntu/cogs/izutools/izutools.py:545
+#, docstring
+msgid "Add me to your server!"
+msgstr ""
+
+#: /home/ubuntu/cogs/izutools/izutools.py:587
+#, docstring
+msgid "Invite to my support server!"
+msgstr ""
+
+#: /home/ubuntu/cogs/izutools/izutools.py:623
+#, docstring
+msgid "WebSocket stats."
+msgstr ""
+
+#: /home/ubuntu/cogs/izutools/izutools.py:663
+#, docstring
+msgid "Credits for everyone that makes this bot possible."
+msgstr ""
+
+#: /home/ubuntu/cogs/izutools/izutools.py:686
+msgid "{}'s Credits"
+msgstr ""
+
+#: /home/ubuntu/cogs/izutools/izutools.py:687
+msgid "Credits for all people and services that help {} exist."
+msgstr ""
+
+#: /home/ubuntu/cogs/izutools/izutools.py:693
+msgid "{} exists since"
+msgstr ""
+
+#: /home/ubuntu/cogs/izutools/izutools.py:697
+msgid ""
+"{} is an instance of [Red bot](https://github.com/Cog-Creators/Red-"
+"DiscordBot), created by [Twentysix](https://github.com/Twentysix26), and "
+"maintained by [awesome community](https://github.com/Cog-Creators/Red-"
+"DiscordBot/graphs/contributors)."
+msgstr ""
+
+#: /home/ubuntu/cogs/izutools/izutools.py:705
+msgid "Hosting"
+msgstr ""
+
+#: /home/ubuntu/cogs/izutools/izutools.py:706
+msgid "This instance is maintained by Onii-chan#3920."
+msgstr ""
+
+#: /home/ubuntu/cogs/izutools/izutools.py:710
+msgid "Art"
+msgstr ""
+
+#: /home/ubuntu/cogs/izutools/izutools.py:711
+msgid ""
+"The avatar artwork has been created by [bambieyhs](https://www.deviantart.com/bambieyhs),\n"
+"which you can see the [full version here](https://www.deviantart.com/bambieyhs/art/CM-My-office-is-the-battlefield-767292875),\n"
+" you can look at their [DeviantArt profile](https://www.deviantart.com/bambieyhs). A huge thanks to Hyanna and AztoDio, for the previous artworks and a huge thanks for bambieyhs for the current artwork! <:love:820231241768108044>"
+msgstr ""
+
+#: /home/ubuntu/cogs/izutools/izutools.py:719
+msgid ""
+"*Use `{}findcog <command>` to find out who is author of certain command.*\n"
+msgstr ""
+
+#: /home/ubuntu/cogs/izutools/izutools.py:733
+msgid "Third-party modules (Cogs) and their creators"
+msgstr ""
+
+#: /home/ubuntu/cogs/izutools/izutools.py:743
+msgid "Code contributors"
+msgstr ""
+
+#: /home/ubuntu/cogs/izutools/izutools.py:779
+#, docstring
+msgid ""
+"Get ping/latency of [botname].\n"
+"        This data cant be considered an actual latency, and, as matter of fact, affected by many factors.\n"
+"        Discord WS: WebSocket latency. This is how fast bot will receive events from Discord.\n"
+"        Message: Difference between your command message and message with ping.\n"
+"        Typing: Time that bot taken to send message with ping."
+msgstr ""
+
+#: /home/ubuntu/cogs/izutools/izutools.py:806
+msgid "Shard {}/{}: {}ms"
+msgstr ""
+
+#: /home/ubuntu/cogs/izutools/izutools.py:814
+msgid "<a:false:810471052424511498> please enable external emojis"
+msgstr ""
+
+#: /home/ubuntu/cogs/izutools/izutools.py:823
+#: /home/ubuntu/cogs/izutools/izutools.py:841
+#: /home/ubuntu/cogs/izutools/izutools.py:871
+#: /home/ubuntu/cogs/izutools/izutools.py:899
+msgid "Message"
+msgstr ""
+
+#: /home/ubuntu/cogs/izutools/izutools.py:825
+#: /home/ubuntu/cogs/izutools/izutools.py:861
+#: /home/ubuntu/cogs/izutools/izutools.py:872
+#: /home/ubuntu/cogs/izutools/izutools.py:902
+msgid "Typing"
+msgstr ""
+
+#: /home/ubuntu/cogs/izutools/izutools.py:829
+msgid "Shards"
+msgstr ""
+
+#: /home/ubuntu/cogs/izutools/izutools.py:878
+msgid "Shard {}/{}"
+msgstr ""
+
+#: /home/ubuntu/cogs/izutools/izutools.py:922
+#, docstring
+msgid "Ship names of 2 server members and count their compatibility level."
+msgstr ""
+
+#: /home/ubuntu/cogs/izutools/izutools.py:960
+msgid ""
+"Unable to get image: [{e.status}] {e.message}\n"
+"\n"
+"Try again later."
+msgstr ""
+
+#: /home/ubuntu/cogs/izutools/izutools.py:974
+msgid "Powered by martinebot.com API"
+msgstr ""
+
+#: /home/ubuntu/cogs/izutools/izutools.py:991
+#, docstring
+msgid "Get current server info."
+msgstr ""
+
+#: /home/ubuntu/cogs/izutools/izutools.py:1085
+#, docstring
+msgid "Bot uptime and stuff."
+msgstr ""
+
+#: /home/ubuntu/cogs/izutools/izutools.py:1208
+#, docstring
+msgid "Check the user's roles. Provide no arguments to check your roles."
+msgstr ""
+
+#: /home/ubuntu/cogs/izutools/izutools.py:1224
+#, docstring
+msgid "Get role permissions."
+msgstr ""
+
+#: /home/ubuntu/cogs/izutools/izutools.py:1275
+#, docstring
+msgid ""
+"\n"
+"        Request a feature to be added to Izumi.\n"
+"        Spamming this command or sending spam requests will get you blacklisted from the bot.\n"
+"        "
+msgstr ""
+
+#: /home/ubuntu/cogs/izutools/izutools.py:1290
+msgid "Response timed out, please try again later."
+msgstr ""
+
+#: /home/ubuntu/cogs/izutools/izutools.py:1334
+#, docstring
+msgid ""
+"\n"
+"        Report a bug or User to Izumi's support server.\n"
+"        "
+msgstr ""
+
+#: /home/ubuntu/cogs/izutools/izutools.py:1361
+#, docstring
+msgid "Manage Requests!"
+msgstr ""
+
+#: /home/ubuntu/cogs/izutools/izutools.py:1383
+#, docstring
+msgid ""
+"\n"
+"        Gets the first message in a channel.\n"
+"        "
+msgstr ""
+
+#: /home/ubuntu/cogs/izutools/izutools.py:1418
+#, docstring
+msgid ""
+"\n"
+"        Get info about a specified country.\n"
+"        "
+msgstr ""

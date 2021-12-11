@@ -1,0 +1,40 @@
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"POT-Creation-Date: 2021-12-09 01:13+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: redgettext 3.3\n"
+
+#: /home/ubuntu/cogs/economy/economy.py:118
+#, docstring
+msgid ""
+"\n"
+"        Pay 10000 to enter the lottery, you have a 1/1980000099 chance of winning!\n"
+"\n"
+"        You can walk away with 2 million umi's if you win.\n"
+"\n"
+"        Good luck!\n"
+"        "
+msgstr ""
+
+#: /home/ubuntu/cogs/economy/economy.py:194
+#, docstring
+msgid "Take a loan from the bank!"
+msgstr ""
+
+#: /home/ubuntu/cogs/economy/economy.py:283
+#, docstring
+msgid ""
+"\n"
+"        Transfer some of your money to another user.\n"
+"\n"
+"        <amount> is the amount you want to transfer, if this isnt specified, it will default to 10000\n"
+"        <user> is the user you want to transfer the money to\n"
+"        "
+msgstr ""

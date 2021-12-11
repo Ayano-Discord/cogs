@@ -1,0 +1,71 @@
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"POT-Creation-Date: 2021-12-09 01:14+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: redgettext 3.3\n"
+
+#: /home/ubuntu/cogs/ytdl/ytdl.py:409
+#, docstring
+msgid ""
+"\n"
+"        Shows the amount of songs played.\n"
+"        "
+msgstr ""
+
+#: /home/ubuntu/cogs/ytdl/ytdl.py:712
+#, docstring
+msgid ""
+"\n"
+"        Play a song\n"
+"\n"
+"        Usage:\n"
+"            [p]play <song name>\n"
+"\n"
+"        Arguements:\n"
+"            search: The song name to search for\n"
+"\n"
+"            Instead of specifying the song name, you can use the following flags:\n"
+"                    --random:\n"
+"                        Play a random song from our list of curated tracks.\n"
+"                    --hibiki:\n"
+"                        Play a random song about Hibiki.\n"
+"\n"
+"                NOTE: IF YOU DECIDE TO SPECIFY BOTH FLAGS, `--hibiki` WILL GAIN PRIORITY OVER `--random`.\n"
+"        "
+msgstr ""
+
+#: /home/ubuntu/cogs/ytdl/ytdl.py:881
+#, docstring
+msgid "A command to find lyrics easily!"
+msgstr ""
+
+#: /home/ubuntu/cogs/ytdl/ytdl.py:939
+#, docstring
+msgid ""
+"\n"
+"        DJ settings, such as toggling and setting the role.\n"
+"        "
+msgstr ""
+
+#: /home/ubuntu/cogs/ytdl/ytdl.py:954 /home/ubuntu/cogs/ytdl/ytdl.py:997
+#, docstring
+msgid ""
+"\n"
+"        Add a DJ role.\n"
+"        "
+msgstr ""
+
+#: /home/ubuntu/cogs/ytdl/ytdl.py:974
+#, docstring
+msgid ""
+"\n"
+"        Remove a DJ role.\n"
+"        "
+msgstr ""

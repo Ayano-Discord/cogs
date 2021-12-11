@@ -1,0 +1,30 @@
+[tool.black]
+    line-length = 150
+    target-version = ['py38']
+    include = '\.py$'
+[tool.isort]
+    profile = "black"
+    line_length = 150
+    combine_as_imports = true
+    atomic = true
+    combine_star = true
+    from_first = true
+    force_alphabetical_sort_within_sections = true
+    virtual_env = true
+    case_sensitive = true
+    remove_redundant_aliases = true
+    dedup_headings = true
+    skip_glob = [
+    ]
+    filter_files = true
+    sections = ["FUTURE", "STDLIB", "THIRDPARTY", "FIRSTPARTY", "LOCALFOLDER"]
+    known_first_party = ["lavalink", "audio"]
+    known_third_party= ["redbot", "yaml", "tabulate", "discord", "bs4"]
+    import_heading_future = "Future Imports"
+    import_heading_stdlib = "Standard Library Imports"
+    import_heading_thirdparty = "Dependency Imports"
+    import_heading_firstparty = "My Modded Imports"
+    import_heading_localfolder = "Music Imports"
+
+    add_imports  = ["from __future__ import annotations"]
+    append_only = true

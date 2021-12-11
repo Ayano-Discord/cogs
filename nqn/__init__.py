@@ -1,0 +1,19 @@
+# Future Imports
+from __future__ import annotations
+
+# Standard Library Imports
+from pathlib import Path
+import json
+
+# Dependency Imports
+from redbot.core.bot import Red
+
+# Music Imports
+from .nqn import NotQuiteNitro
+
+with open(Path(__file__).parent / "info.json") as fp:
+    __red_end_user_data_statement__ = json.load(fp)["end_user_data_statement"]
+
+
+async def setup(bot: Red) -> None:
+    bot.add_cog(NotQuiteNitro(bot))
