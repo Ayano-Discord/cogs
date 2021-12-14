@@ -213,79 +213,85 @@ class Slashcmd(commands.Cog):
     @tasks.loop(seconds=360)
     async def change_presence(self):
 
-        status_picker = "stats", "watching", "playing", "streaming"
+        # status_picker = "stats", "watching", "playing", "streaming"
 
-        statuses = random.choice(status_picker)
+        # statuses = random.choice(status_picker)
 
-        playing_statuses = (
-            "With Your Heart",
-            "Genshin And Honkai Impact",
-            "While Losing Sleep",
-            "With the Onii-chan",
-            "With My Master",
-        )
+        # playing_statuses = (
+        #     "With Your Heart",
+        #     "Genshin And Honkai Impact",
+        #     "While Losing Sleep",
+        #     "With the Onii-chan",
+        #     "With My Master",
+        # )
 
-        watching_statuses = (
-            "Demon Slayer The Movie: Mugen Train",
-            "Your Name",
-            "A Whisper Away",
-            "A Silent Voice",
-            "Summer Wars",
-        )
+        # watching_statuses = (
+        #     "Demon Slayer The Movie: Mugen Train",
+        #     "Your Name",
+        #     "A Whisper Away",
+        #     "A Silent Voice",
+        #     "Summer Wars",
+        # )
 
-        stream_urls = (
-            "https://twitch.tv/thean1meman/",
-            "https://twitch.tv/discord/",
-            "https://izumibot.x10.mx/invite/",
-            "https://izumibot.x10.mx/support/",
-            "https://www.twitch.tv/directory/game/Genshin%20Impact",
-        )
+        # stream_urls = (
+        #     "https://twitch.tv/thean1meman/",
+        #     "https://twitch.tv/discord/",
+        #     "https://izumibot.x10.mx/invite/",
+        #     "https://izumibot.x10.mx/support/",
+        #     "https://www.twitch.tv/directory/game/Genshin%20Impact",
+        # )
 
-        bot_guilds_l = len(self.bot.guilds)
-        visible_users = sum(len(s.members) for s in self.bot.guilds)
-        visible_users_1 = humanize_number(visible_users)
+        # bot_guilds_l = len(self.bot.guilds)
+        # visible_users = sum(len(s.members) for s in self.bot.guilds)
+        # visible_users_1 = humanize_number(visible_users)
 
-        if statuses == "watching":
-            my_statuses = random.choice(watching_statuses)
-            status_type = discord.ActivityType.watching
-            activity_chooser = discord.Activity(
-                type=status_type,
-                name=my_statuses,
+        # if statuses == "watching":
+        #     my_statuses = random.choice(watching_statuses)
+        #     status_type = discord.ActivityType.watching
+        #     activity_chooser = discord.Activity(
+        #         type=status_type,
+        #         name=my_statuses,
+        #         status=discord.Status.online,
+        #     )
+
+        # if statuses == "playing":
+        #     my_statuses = random.choice(playing_statuses)
+        #     status_type = discord.ActivityType.playing
+        #     activity_chooser = discord.Activity(
+        #         type=status_type,
+        #         name=my_statuses,
+        #         status=discord.Status.dnd,
+        #     )
+
+        # if statuses == "streaming":
+        #     my_statuses = random.choice(watching_statuses)
+        #     url = random.choice(stream_urls)
+        #     activity_chooser = discord.Streaming(
+        #         name=my_statuses,
+        #         url=url,
+        #     )
+
+        # else:
+        #     my_statuses = (
+        #         "@Hibiki help or %help | {} servers and {} users!"
+        #     ).format(
+        #         bot_guilds_l,
+        #         visible_users_1,
+        #     )
+        #     status_type = discord.ActivityType.listening
+        #     activity_chooser = discord.Activity(
+        #         type=status_type,
+        #         name=my_statuses,
+        #         status=discord.Status.online,
+        #     )
+
+        await self.bot.change_presence(
+            activity=discord.Activity(
+                type=discord.ActivityType.watching,
+                name="{} Servers! | %help".format(len(self.bot.guilds)),
                 status=discord.Status.online,
             )
-
-        if statuses == "playing":
-            my_statuses = random.choice(playing_statuses)
-            status_type = discord.ActivityType.playing
-            activity_chooser = discord.Activity(
-                type=status_type,
-                name=my_statuses,
-                status=discord.Status.dnd,
-            )
-
-        if statuses == "streaming":
-            my_statuses = random.choice(watching_statuses)
-            url = random.choice(stream_urls)
-            activity_chooser = discord.Streaming(
-                name=my_statuses,
-                url=url,
-            )
-
-        else:
-            my_statuses = (
-                "@Hibiki help or %help | {} servers and {} users!"
-            ).format(
-                bot_guilds_l,
-                visible_users_1,
-            )
-            status_type = discord.ActivityType.listening
-            activity_chooser = discord.Activity(
-                type=status_type,
-                name=my_statuses,
-                status=discord.Status.online,
-            )
-
-        await self.bot.change_presence(activity=activity_chooser)
+        )
 
     @change_presence.before_loop
     async def before_change_presenc(self):

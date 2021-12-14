@@ -574,10 +574,6 @@ class Mod(ModClass):
         name="server", description="Get information about your server!"
     )
     async def slash_serverinfo(self, inter):
-        # if inter.guild is None:
-        #     inter.reply("Please run this in a guild and not my dms!")
-        #     return
-        "Get current server info."
         guild = inter.guild
         levels = {
             "None - No criteria set.": discord.VerificationLevel.none,
@@ -667,7 +663,7 @@ class Mod(ModClass):
         embed.add_field(
             name=f"Emojis ({len(guild.emojis)})", value=emotes_list
         )
-        await inter.reply(embed=embed)
+        await inter.send(embed=embed)
 
     @dislash.guild_only()
     @info.sub_command(
