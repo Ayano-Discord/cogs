@@ -288,11 +288,7 @@ class Slashcmd(commands.Cog):
         await self.bot.change_presence(
             activity=discord.Activity(
                 type=discord.ActivityType.watching,
-                name="{} Servers! | %help".format(
-                    len(
-                        self.bot.guilds
-                    )
-                ),
+                name="{} Servers! | %help".format(len(self.bot.guilds)),
                 status=discord.Status.online,
             )
         )
