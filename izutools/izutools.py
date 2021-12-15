@@ -990,11 +990,11 @@ class izutools(commands.Cog):
     @commands.command(aliases=["si"])
     @commands.guild_only()
     @commands.bot_has_permissions(embed_links=True, external_emojis=True)
-    async def serverinfo(self, ctx, guild = None):
+    async def serverinfo(self, ctx, guild: discord.Guild = None):
         """
         Show server information.
         """
-        if guild is not None and ctx.author not in ctx.bot.owner_ids:
+        if guild is not None and ctx.author.id not in ctx.bot.owner_ids:
             guild = ctx.guild
         if ctx.author.id in ctx.bot.owner_ids:
             guild = guild or ctx.guild
