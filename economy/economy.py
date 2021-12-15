@@ -192,13 +192,13 @@ class Economy(EconomyClass):
     @commands.command(name="loan")
     async def loan(self, ctx, amount: int):
         """Take a loan from the bank!"""
-        print("I got this far!0")
+        # print("I got this far!0")
         if is_premium:
             limit = 1000000
         #        print("I got this far!")
         else:
             limit = 500000
-        print("I got this far!")
+        # print("I got this far!")
 
         def check(msg):
             return (
@@ -206,7 +206,7 @@ class Economy(EconomyClass):
                 and msg.author.id == ctx.author.id
             )
 
-        print("I got this far!2")
+        # print("I got this far!2")
         if amount > limit:
             await ctx.reply(
                 "Oops! I don't want to be bankrupt! Please try an amount **smaller** than {}!".format(
@@ -214,13 +214,13 @@ class Economy(EconomyClass):
                 )
             )
             return
-        print("I got this far!3")
+        # print("I got this far!3")
         if not is_premium:
             interest_rate = random.randint(2.8, 3.5)
             interest = amount * interest_rate
         else:
             interest = amount
-        print("I got this far!4")
+        # print("I got this far!4")
         await ctx.send(
             "Are you sure you wanna take a loan of {}, You'll have 1 month to pay it back.\n**Reply with yes/y to confirm or no/n to cancel.**"
         )
@@ -231,16 +231,16 @@ class Economy(EconomyClass):
                 month = datetime.datetime.fromtimestamp(now)
                 date_format = month.strftime("%m/%d/%Y %H:%M:%S")
                 date_format_parse = parse(date_format)
-                print("I got this far!5")
+                #  print("I got this far!5")
                 future_date = date_format_parse + relativedelta(months=1)
                 future_date_utc = future_date.replace(
                     tzinfo=timezone.utc
                 ).timestamp()
-                print("I got this far!6")
+                # print("I got this far!6")
                 loans = json.load(
                     open("/home/ubuntu/mine/economy/dicts/loans.json", "r")
                 )
-                print("I got this far!7")
+                # print("I got this far!7")
                 data = {
                     "user_id": ctx.author.id,
                     "loan_amount": amount,
@@ -248,25 +248,25 @@ class Economy(EconomyClass):
                     "end_time": future_date_utc,
                 }
                 loans[str(ctx.author.id)] = data
-                print("I got this far!8")
+                # print("I got this far!8")
                 json.dump(
                     loans,
                     open("/home/ubuntu/mine/economy/dicts/loans.json", "w"),
                     indent=4,
                 )
-                print("I got this far!9")
+                # print("I got this far!9")
                 await bank.deposit_credits(amount)
                 bank_bal = await bank.get_balance(ctx.author)
-                print("I got this far!10")
+                # print("I got this far!10")
                 success_string = (
                     "{} Has been added to your account, your new balance is {}.\n"
                     "**You have 1 month to pay back your loan"
                     "before you're automatically blacklisted.**\n\n"
                     "Enjoy!"
                 ).format(amount, bank_bal)
-                print("I got this far!11")
+                # print("I got this far!11")
                 await ctx.send(success_string)
-                print("I got this far!12")
+                # print("I got this far!12")
 
         except asyncio.TimeoutError:
             return await ctx.send("Cancelling...")

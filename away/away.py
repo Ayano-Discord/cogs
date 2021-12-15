@@ -146,18 +146,18 @@ class Away(commands.Cog):
         message,
         #         channel: discord.TextChannel
     ):
-        print("got this far")
+        # print("got this far")
         guild = message.guild
         if not guild:
             return
         # if not message.guild:
         #     return
-        print("got this far 1")
+        # print("got this far 1")
         if not message.mentions or message.author.bot:
             return
         if not message.channel.permissions_for(guild.me).send_messages:
             return
-        print("got this far 2")
+        # print("got this far 2")
         for mentions in message.mentions:
             if mentions.id in self.away_users:
                 away_msg = await self.config.user(mentions).away_message()
