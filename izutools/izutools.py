@@ -1233,6 +1233,23 @@ class izutools(commands.Cog):
 
         await ctx.send(embed=data)
 
+    @commands.command()
+    async def avatar(self, ctx: commands.Context, user: discord.Member=None):
+        """
+        Returns user avatar URL.
+        User argument can be user mention, nickname, username, user ID.
+        Default to yourself when no argument is supplied.
+        """
+
+        if not user:
+            user = ctx.author
+
+        embed = discord.Embed(title="{}'s avatar".format(user.name))
+        embed.image(url=user.avatar.url)
+        embed.set_footer(text="Requested by {}".format(user.name), icon_url=ctx.author.avatar.url)
+
+        await ctx.send(embed=embed)
+
     @commands.command(alias=["bstats"])
     async def botstats(self, ctx):
         "Bot uptime and stuff."
