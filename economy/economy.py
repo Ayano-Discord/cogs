@@ -2,30 +2,27 @@
 from __future__ import annotations
 
 # Standard Library Imports
+from collections import defaultdict
 from datetime import timezone
 from random import randint
 import asyncio
 import datetime
-import sys
-
-sys.path.insert(1, "/home/ubuntu/mine/premium")
-
-# Standard Library Imports
 import json
 import logging
 import random
+import sys
 import time
 
 # Dependency Imports
-from checks import is_premium
 from dateutil.parser import parse
 from dateutil.relativedelta import relativedelta
 from redbot.cogs.economy import Economy as EconomyClass
-from redbot.core import bank, commands
+from redbot.core import bank, commands, Config
 from redbot.core.config import Value
 from redbot.core.errors import BalanceTooHigh
 from redbot.core.utils.predicates import MessagePredicate
 import discord
+import humanize
 
 # Music Imports
 from .constants import job_list
@@ -47,9 +44,42 @@ class Economy(EconomyClass):
         if self.startup_task:
             self.startup_task.cancel()
 
+    default_guild_settings = {
+        "PAYDAY_TIME": 300,
+        "PAYDAY_CREDITS": 120,
+        "SLOT_MIN": 5,
+        "SLOT_MAX": 100,
+        "SLOT_TIME": 5,
+        "REGISTER_CREDITS": 0,
+    }
+
+    default_global_settings = default_guild_settings
+
+    default_member_settings = {
+        "next_payday": 0,
+        "last_slot": 0,
+        "daily_cooldowns": {
+            "daily_cooldown": 0,
+            "weekly_cooldown": 0,
+            "monthly_cooldown": 0,
+        },
+    }
+
+    default_role_settings = {"PAYDAY_CREDITS": 0}
+
+    default_user_settings = default_member_settings
+
     def __init__(self, bot):
+
         super().__init__(bot)
         self.bot = bot
+        self.config = Config.get_conf(self, 1256844281)
+        self.config.register_guild(**self.default_guild_settings)
+        self.config.register_global(**self.default_global_settings)
+        self.config.register_member(**self.default_member_settings)
+        self.config.register_user(**self.default_user_settings)
+        self.config.register_role(**self.default_role_settings)
+        self.slot_register = defaultdict(dict)
 
     @commands.command()
     @commands.cooldown(1, 600, commands.BucketType.user)
@@ -189,88 +219,6 @@ class Economy(EconomyClass):
             await ctx.send("Cancelling...")
             return
 
-    @commands.command(name="loan")
-    async def loan(self, ctx, amount: int):
-        """Take a loan from the bank!"""
-        # print("I got this far!0")
-        if is_premium:
-            limit = 1000000
-        #        print("I got this far!")
-        else:
-            limit = 500000
-        # print("I got this far!")
-
-        def check(msg):
-            return (
-                msg.content.lower().startswith("y")
-                and msg.author.id == ctx.author.id
-            )
-
-        # print("I got this far!2")
-        if amount > limit:
-            await ctx.reply(
-                "Oops! I don't want to be bankrupt! Please try an amount **smaller** than {}!".format(
-                    limit
-                )
-            )
-            return
-        # print("I got this far!3")
-        if not is_premium:
-            interest_rate = random.randint(2.8, 3.5)
-            interest = amount * interest_rate
-        else:
-            interest = amount
-        # print("I got this far!4")
-        await ctx.send(
-            "Are you sure you wanna take a loan of {}, You'll have 1 month to pay it back.\n**Reply with yes/y to confirm or no/n to cancel.**"
-        )
-        try:
-            msg = await self.bot.wait_for("message", timeout=10, check=check)
-            if msg:
-                now = int(time.time())
-                month = datetime.datetime.fromtimestamp(now)
-                date_format = month.strftime("%m/%d/%Y %H:%M:%S")
-                date_format_parse = parse(date_format)
-                #  print("I got this far!5")
-                future_date = date_format_parse + relativedelta(months=1)
-                future_date_utc = future_date.replace(
-                    tzinfo=timezone.utc
-                ).timestamp()
-                # print("I got this far!6")
-                loans = json.load(
-                    open("/home/ubuntu/mine/economy/dicts/loans.json", "r")
-                )
-                # print("I got this far!7")
-                data = {
-                    "user_id": ctx.author.id,
-                    "loan_amount": amount,
-                    "interest": interest,
-                    "end_time": future_date_utc,
-                }
-                loans[str(ctx.author.id)] = data
-                # print("I got this far!8")
-                json.dump(
-                    loans,
-                    open("/home/ubuntu/mine/economy/dicts/loans.json", "w"),
-                    indent=4,
-                )
-                # print("I got this far!9")
-                await bank.deposit_credits(amount)
-                bank_bal = await bank.get_balance(ctx.author)
-                # print("I got this far!10")
-                success_string = (
-                    "{} Has been added to your account, your new balance is {}.\n"
-                    "**You have 1 month to pay back your loan"
-                    "before you're automatically blacklisted.**\n\n"
-                    "Enjoy!"
-                ).format(amount, bank_bal)
-                # print("I got this far!11")
-                await ctx.send(success_string)
-                # print("I got this far!12")
-
-        except asyncio.TimeoutError:
-            return await ctx.send("Cancelling...")
-
     @commands.command(name="transfer")
     @commands.cooldown(1, 3600, commands.BucketType.user)
     @commands.guild_only()
@@ -341,6 +289,38 @@ class Economy(EconomyClass):
                 )
         else:
             return await ctx.send("Cancelling...")
+
+    @commands.command(name="daily")
+    @commands.cooldown(1, 30, commands.BucketType.user)
+    @commands.guild_only()
+    async def _daily(self, ctx):
+        """
+        Get your daily umis!
+
+        You can only get your daily umis once per day.
+        """
+        user = ctx.author
+        daily_bal = await self.config.user(
+            ctx.author
+        ).daily_cooldowns.daily_cooldown()
+        if daily_bal > 0:
+            return await ctx.send(
+                "You already got your daily umis! You can get your daily umis again in {}".format(
+                    humanize.naturaldelta(
+                        datetime.datetime.utcnow()
+                        + datetime.timedelta(hours=24)
+                        - datetime.datetime.utcnow()
+                    )
+                )
+            )
+        else:
+            amount = random.randrange(100, 500)
+            await bank.deposit_credits(user, amount)
+            await ctx.send(
+                "You got your daily umis! You now have {} umis".format(
+                    await bank.get_balance(user)
+                )
+            )
 
 
 async def setup(bot):

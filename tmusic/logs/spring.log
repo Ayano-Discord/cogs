@@ -1,0 +1,2 @@
+2021-12-20 06:59:38.853  INFO 4030489 --- [XNIO-1 I/O-6] lavalink.server.io.SocketServer          : Connection closed from /127.0.0.1:38940 -- CloseStatus[code=1006, reason=]
+2021-12-20 06:59:38.933  INFO 4030489 --- [XNIO-1 I/O-6] lavalink.server.io.SocketContext         : Shutting down 0 playing players.

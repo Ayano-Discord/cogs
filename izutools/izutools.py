@@ -362,7 +362,7 @@ class izutools(commands.Cog):
         shards = _("shards") if self.bot.shard_count > 1 else _("shard")
         visible_users = sum(len(s.members) for s in self.bot.guilds)
         visible_users_1 = humanize_number(visible_users)
-        embed = discord.Embed(color=0xF295A4)
+        embed = discord.Embed(color=await ctx.embed_color())
         embed.set_thumbnail(
             url=self.bot.user.avatar.with_static_format("png").url
         )
@@ -750,7 +750,7 @@ class izutools(commands.Cog):
             name="Special Thanks to",
             value=(
                 "[**Fixator10#7133**](https://github.com/fixator10) for sharing a lot of his code and helping (spoonfeeding me a lot of his code) me a lot!\n"
-                "[**OufChair**](https://github.com/OofChair) for hosting imgen, a service which helps us make images.\n"
+                "[**OofChair**](https://github.com/OofChair) for hosting imgen, a service which helps us make images.\n"
                 "[HATSUNE MIKU](https://github.com/Dhruvacube) for helping me with a lot of vote related commands!",
             ),
             inline=False,
@@ -1234,7 +1234,7 @@ class izutools(commands.Cog):
         await ctx.send(embed=data)
 
     @commands.command(name="avatar")
-    async def avatar(self, ctx, user: discord.Member=None):
+    async def avatar(self, ctx, user: discord.Member = None):
         """
         Returns user avatar URL.
         User argument can be user mention, nickname, username, user ID.
@@ -1246,7 +1246,10 @@ class izutools(commands.Cog):
 
         embed = discord.Embed(title="{}'s avatar".format(user.name))
         embed.set_image(url=user.avatar.url)
-        embed.set_footer(text="Requested by {}".format(ctx.author.name), icon_url=ctx.author.avatar.url)
+        embed.set_footer(
+            text="Requested by {}".format(ctx.author.name),
+            icon_url=ctx.author.avatar.url,
+        )
 
         await ctx.send(embed=embed)
 

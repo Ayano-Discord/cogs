@@ -97,12 +97,8 @@ class Music(commands.Cog, discordSuperUtils.CogManager.Cog):
         self.bot = bot
         self.skip_votes = {}  # Skip vote counter dictionary
 
-        self.client_secret = (
-            "be1a4f915d7a407d9ae8d622a51715a0"  # spotify client_secret
-        )
-        self.client_id = (
-            "2bca509ba896497b987d6a9a60b08acd"  # spotify client_id
-        )
+        self.client_secret = ""  # spotify client_secret
+        self.client_id = "2"  # spotify client_id
 
         # Get your's from here https://developer.spotify.com/
 
