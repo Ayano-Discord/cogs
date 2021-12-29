@@ -57,7 +57,7 @@ class Dbl(commands.Cog):
             "top_token": "",
             "bfd_token": "",
             "fate_token": "",
-            "delly_token": ""
+            "delly_token": "",
         }
         self.config.register_user(**default_user)
         self.config.register_global(**default_global)
@@ -108,9 +108,7 @@ class Dbl(commands.Cog):
                 f"The top.gg token has been set to {new_token}"
             )
         except discord.Forbidden:
-            await ctx.send(
-                f"The top.gg token has been set to {new_token}"
-            )
+            await ctx.send(f"The top.gg token has been set to {new_token}")
 
     @commands.commands(name="bfd")
     async def bfd_token(self, ctx: commands.Context, new_token: str):
@@ -138,9 +136,7 @@ class Dbl(commands.Cog):
                 f"The fateslist token has been set to {new_token}"
             )
         except discord.Forbidden:
-            await ctx.send(
-                f"The fateslist token has been set to {new_token}"
-            )
+            await ctx.send(f"The fateslist token has been set to {new_token}")
 
     @commands.commands(name="delly")
     async def delly_token(self, ctx, new_token: str):
@@ -153,9 +149,7 @@ class Dbl(commands.Cog):
                 f"The delly token has been set to {new_token}"
             )
         except discord.Forbidden:
-            await ctx.send(
-                f"The delly token has been set to {new_token}"
-            )
+            await ctx.send(f"The delly token has been set to {new_token}")
 
     @dbl.group()
     async def fate(self, ctx: commands.Context):
