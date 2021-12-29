@@ -18,14 +18,9 @@ import topgg
 
 # Music Imports
 from .constants import (
-    bfd_token,
-    dbl_token,
-    delly_token,
     Embed,
-    fate_token,
     generatedailyembed,
     get_user,
-    top_token,
     votedbotsfordiscord,
     votedTopgg,
 )
