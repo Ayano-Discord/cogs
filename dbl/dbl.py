@@ -508,45 +508,35 @@ class Dbl(commands.Cog):
             embed=embed, components=my_buttons, mention_author=False
         )
 
-    @topgg.endpoint("/dblwebhook", topgg.WebhookType.BOT, "youshallnotpass")
-    async def endpoint(
-        self,
-        vote_data: topgg.BotVoteData,
-        # uncomment this if you want to get access to client
-        # client: discord.Client = topgg.data(discord.Client),
-    ):
-        print(f"Vote recieved from {vote_data.user.name}!")
-        await self.bot.dispatch("topgg_vote", vote_data)
+    # @commands.Cog.listener()
+    # async def on_topgg_vote(self, vote_data):
+    #     guild = self.bot.getguild(852094131047104593)
+    #     channel = guild.get_channel(861505196680675368)
+    #     member = guild.get_member(vote_data.user_id)
+    #     await channel.send(
+    #         f"We have recieved a new vote from {vote_data.user.name}!"
+    #     )
+    #     if not member:
+    #         return
 
-    @commands.Cog.listener()
-    async def on_topgg_vote(self, vote_data):
-        guild = self.bot.getguild(852094131047104593)
-        channel = guild.get_channel(861505196680675368)
-        member = guild.get_member(vote_data.user_id)
-        await channel.send(
-            f"We have recieved a new vote from {vote_data.user.name}!"
-        )
-        if not member:
-            return
+    #     role = discord.utils.get(guild.roles, name="Voter")
+    #     await member.add_roles(role)
 
-        role = discord.utils.get(guild.roles, name="Voter")
-        await member.add_roles(role)
+    #     try:
+    #         vote_embed = discord.Embed(
+    #             title="Thank you for voting!",
+    #             colour=await self.bot.embed_colour(),
+    #             description="Thank you for voting for us on top.gg!",
+    #         )
+    #         vote_embed.set_thumbnail(
+    #             url=self.bot.user.avatar.with_static_format("png").url
+    #         )
+    #         vote_embed.add_field(
+    #             name="The following rewards have been giving to you:",
+    #             value="If you are in the Support Server you would have been given the 'Voter Role',  **Note: This role will be removed after 24 hours**\nYou have been given 1000 Yen!",
+    #         )
+    #         await member.send(embed=vote_embed)
+    #     except discord.errors.Forbidden:
+    #         pass
 
-        try:
-            vote_embed = discord.Embed(
-                title="Thank you for voting!",
-                colour=await self.bot.embed_colour(),
-                description="Thank you for voting for us on top.gg!",
-            )
-            vote_embed.set_thumbnail(
-                url=self.bot.user.avatar.with_static_format("png").url
-            )
-            vote_embed.add_field(
-                name="The following rewards have been giving to you:",
-                value="If you are in the Support Server you would have been given the 'Voter Role',  **Note: This role will be removed after 24 hours**\nYou have been given 1000 Yen!",
-            )
-            await member.send(embed=vote_embed)
-        except discord.errors.Forbidden:
-            pass
-
-        await bank.deposit_credits(member.id, 1000)
+    #     await bank.deposit_credits(member.id, 1000)
