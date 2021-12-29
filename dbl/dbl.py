@@ -82,7 +82,7 @@ class Dbl(commands.Cog):
     async def token(self, ctx: commands.Context):
         """Token commands"""
 
-    @commands.commands(name="dbl")
+    @commands.command(name="dbl")
     async def dbl_token(self, ctx: commands.Context, new_token: str):
         """
         Set the discordbotlist.com token
@@ -97,7 +97,7 @@ class Dbl(commands.Cog):
                 f"The discordbotlist.com token has been set to {new_token}"
             )
 
-    @commands.commands(name="topgg")
+    @commands.command(name="topgg")
     async def topgg_token(self, ctx: commands.Context, new_token: str):
         """
         Set the top.gg token
@@ -110,7 +110,7 @@ class Dbl(commands.Cog):
         except discord.Forbidden:
             await ctx.send(f"The top.gg token has been set to {new_token}")
 
-    @commands.commands(name="bfd")
+    @commands.command(name="bfd")
     async def bfd_token(self, ctx: commands.Context, new_token: str):
         """
         Set the botsfordiscord.com token
@@ -125,7 +125,7 @@ class Dbl(commands.Cog):
                 f"The botsfordiscord.com token has been set to {new_token}"
             )
 
-    @commands.commands(name="fate")
+    @commands.command(name="fate")
     async def fate_token(self, ctx: commands.Context, new_token: str):
         """
         Set the fate token
@@ -138,7 +138,7 @@ class Dbl(commands.Cog):
         except discord.Forbidden:
             await ctx.send(f"The fateslist token has been set to {new_token}")
 
-    @commands.commands(name="delly")
+    @commands.command(name="delly")
     async def delly_token(self, ctx, new_token: str):
         """
         Set the delly token
@@ -160,7 +160,7 @@ class Dbl(commands.Cog):
         async with aiohttp.ClientSession() as sess:
             async with sess.post(
                 "https://api.discordextremelist.xyz/v2/bot/{self.bot.user.id}/stats",
-                headers={"Authorization": delly_token},
+                headers={"Authorization": self.config.delly_token()},
                 data=json.dumps({"guildCount": len(self.bot.guilds)}),
             ) as resp:
                 print(resp.status)
@@ -182,7 +182,7 @@ class Dbl(commands.Cog):
         async with aiohttp.ClientSession() as sess:
             async with sess.post(
                 "https://top.gg/api/bots/762976674659696660/stats",
-                headers={"Authorization": top_token},
+                headers={"Authorization": self.config.top_token()},
                 json={"server_count": len(self.bot.guilds)},
             ) as resp:
                 print(resp.status)
@@ -204,7 +204,7 @@ class Dbl(commands.Cog):
         async with aiohttp.ClientSession() as sess:
             async with sess.post(
                 "https://discords.com/bots/api/bot/762976674659696660",
-                headers={"Authorization": bfd_token},
+                headers={"Authorization": self.config.bfd_token()},
                 json={"server_count": len(self.bot.guilds)},
             ) as resp:
                 print(resp.status)
@@ -226,7 +226,7 @@ class Dbl(commands.Cog):
         async with aiohttp.ClientSession() as sess:
             async with sess.post(
                 "https://discordbotlist.com/api/v1/bots/762976674659696660/stats",
-                headers={"Authorization": dbl_token},
+                headers={"Authorization": self.config.dbl_token()},
                 json={
                     "server_count": len(self.bot.guilds),
                     "user_count": len(self.bot.users),
@@ -251,7 +251,7 @@ class Dbl(commands.Cog):
         async with aiohttp.ClientSession() as sess:
             async with sess.post(
                 "https://fateslist.xyz/api/v2/bots/762976674659696660/stats",
-                headers={"Authorization": fate_token},
+                headers={"Authorization": self.config.fate_token()},
                 json={
                     "guild_count": len(self.bot.guilds),
                     "user_count": len(self.bot.users),
@@ -278,7 +278,7 @@ class Dbl(commands.Cog):
         async with aiohttp.ClientSession() as sess:
             async with sess.get(
                 f"https://fateslist.xyz/api/v2/users/{user.id}/bots/762976674659696660/votes",
-                headers={"Authorization": fate_token},
+                headers={"Authorization": self.config.fate_token()},
             ) as resp:
                 origin = await resp.json()
                 voted = origin["voted"]
@@ -386,15 +386,15 @@ class Dbl(commands.Cog):
             a = await self.session.get(
                 f"https://top.gg/api/bots/{self.bot.user.id}/check",
                 params={"userId": member.id},
-                headers={"Authorization": top_token},
+                headers={"Authorization": self.config.top_token()},
             )
             c = await self.session.get(
                 f"https://discords.com/bots/api/bot/{self.bot.user.id}/votes",
-                headers={"Authorization": bfd_token},
+                headers={"Authorization": self.config.bfd_token()},
             )
             f = await self.session.get(
                 f"https://fateslist.xyz/api/v2/bots/{self.bot.user.id}/votes",
-                headers={"Authorization": fate_token},
+                headers={"Authorization": self.config.fate_token()},
                 data={"user_id": member.id},
             )
 
