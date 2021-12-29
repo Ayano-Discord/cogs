@@ -78,8 +78,8 @@ class Dbl(commands.Cog):
     async def dbl(self, ctx: commands.Context):
         """Discord bot list commands"""
 
-    @commands.group(invoke_without_command=True)
-    async def token(self, ctx: commands.Context):
+    @commands.group(invoke_without_command=True, name='token')
+    async def dbl_token(self, ctx: commands.Context):
         """Token commands"""
         await ctx.send("I need a sub-command you idiot")
 
