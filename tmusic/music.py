@@ -4,17 +4,16 @@ from __future__ import annotations
 # Standard Library Imports
 import asyncio
 import datetime
+import re
+import typing as t
 
 # Dependency Imports
 from discord.ext import menus
 from redbot.core import commands
 import discord
-import re
-import typing as t
 import humanize
 import ujson
 import wavelink
-
 
 URL_REGEX = r"(?i)\b((?:https?://|www\d{0,3}[.]|[a-z0-9.\-]+[.][a-z]{2,4}/)(?:[^\s()<>]+|\(([^\s()<>]+|(\([^\s()<>]+\)))*\))+(?:\(([^\s()<>]+|(\([^\s()<>]+\)))*\)|[^\s`!()\[\]{};:'\".,<>?«»“”‘’]))"
 

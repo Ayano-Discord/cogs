@@ -11,10 +11,10 @@ import logging
 from discord.ext import tasks
 from dislash import *
 from dislash.interactions import ActionRow, Button, ButtonStyle
-from redbot.core import commands, Config, bank
-import topgg
+from redbot.core import bank, commands, Config
 import aiohttp
 import discord
+import topgg
 
 # Music Imports
 from .constants import (
@@ -34,7 +34,7 @@ log = logging.getLogger("red.mine.dbl")
 
 
 class Dbl(commands.Cog):
-    def __init__(self, bot):
+    async def __init__(self, bot):
         self.bot = bot
         self.session = aiohttp.ClientSession()
         self.post_top_guilds.start()
@@ -56,11 +56,13 @@ class Dbl(commands.Cog):
             identifier=798951566634778641,
             force_registration=True,
         )
-        default_user = {
-            "fatetoken": None,
-            "remove_voter_role": 0
-        }
+        default_user = {"fatetoken": None, "remove_voter_role": 0}
         self.config.register_user(**default_user)
+        self.bot.topgg_webhook = topgg.WebhookManager(self.bot).dbl_webhook(
+            "/dblwebhook", "password"
+        )
+
+        await self.bot.topgg_webhook.run(5000)
 
     def cog_unload(self):
         self.post_top_guilds.cancel()
@@ -438,10 +440,7 @@ class Dbl(commands.Cog):
         # client: discord.Client = topgg.data(discord.Client),
     ):
         print(f"Vote recieved from {vote_data.user.name}!")
-        await self.bot.dispatch(
-            "topgg_vote",
-            vote_data
-        )
+        await self.bot.dispatch("topgg_vote", vote_data)
 
     @commands.Cog.listener()
     async def on_topgg_vote(self, vote_data):
@@ -458,17 +457,19 @@ class Dbl(commands.Cog):
         await member.add_roles(role)
 
         try:
-            vote_embed = discord.Embed(title="Thank you for voting!", colour=await self.bot.embed_colour(), description="Thank you for voting for us on top.gg!")
+            vote_embed = discord.Embed(
+                title="Thank you for voting!",
+                colour=await self.bot.embed_colour(),
+                description="Thank you for voting for us on top.gg!",
+            )
             vote_embed.set_thumbnail(
                 url=self.bot.user.avatar.with_static_format("png").url
             )
             vote_embed.add_field(
                 name="The following rewards have been giving to you:",
-                value="If you are in the Support Server you would have been given the 'Voter Role',  **Note: This role will be removed after 24 hours**\nYou have been given 1000 Yen!"
+                value="If you are in the Support Server you would have been given the 'Voter Role',  **Note: This role will be removed after 24 hours**\nYou have been given 1000 Yen!",
             )
-            await member.send(
-                embed=vote_embed
-            )
+            await member.send(embed=vote_embed)
         except discord.errors.Forbidden:
             pass
 

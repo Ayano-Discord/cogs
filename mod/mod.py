@@ -658,31 +658,6 @@ class Mod(ModClass):
                 )
             count += 1
 
-        vc_regions = {
-            "vip-us-east": _("__VIP__ US East ") + "\U0001F1FA\U0001F1F8",
-            "vip-us-west": _("__VIP__ US West ") + "\U0001F1FA\U0001F1F8",
-            "vip-amsterdam": _("__VIP__ Amsterdam ") + "\U0001F1F3\U0001F1F1",
-            "eu-west": _("EU West ") + "\U0001F1EA\U0001F1FA",
-            "eu-central": _("EU Central ") + "\U0001F1EA\U0001F1FA",
-            "europe": _("Europe ") + "\U0001F1EA\U0001F1FA",
-            "london": _("London ") + "\U0001F1EC\U0001F1E7",
-            "frankfurt": _("Frankfurt ") + "\U0001F1E9\U0001F1EA",
-            "amsterdam": _("Amsterdam ") + "\U0001F1F3\U0001F1F1",
-            "us-west": _("US West ") + "\U0001F1FA\U0001F1F8",
-            "us-east": _("US East ") + "\U0001F1FA\U0001F1F8",
-            "us-south": _("US South ") + "\U0001F1FA\U0001F1F8",
-            "us-central": _("US Central ") + "\U0001F1FA\U0001F1F8",
-            "singapore": _("Singapore ") + "\U0001F1F8\U0001F1EC",
-            "sydney": _("Sydney ") + "\U0001F1E6\U0001F1FA",
-            "brazil": _("Brazil ") + "\U0001F1E7\U0001F1F7",
-            "hongkong": _("Hong Kong ") + "\U0001F1ED\U0001F1F0",
-            "russia": _("Russia ") + "\U0001F1F7\U0001F1FA",
-            "japan": _("Japan ") + "\U0001F1EF\U0001F1F5",
-            "southafrica": _("South Africa ") + "\U0001F1FF\U0001F1E6",
-            "india": _("India ") + "\U0001F1EE\U0001F1F3",
-            "dubai": _("Dubai ") + "\U0001F1E6\U0001F1EA",
-            "south-korea": _("South Korea ") + "\U0001f1f0\U0001f1f7",
-        }
         verif = {
             "none": _("0 - None"),
             "low": _("1 - Low"),
