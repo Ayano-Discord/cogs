@@ -57,7 +57,15 @@ class Dbl(commands.Cog):
             force_registration=True,
         )
         default_user = {"fatetoken": None, "remove_voter_role": 0}
+        default_global = {
+            "dbl_token": "",
+            "top_token": "",
+            "bfd_token": "",
+            "fate_token": "",
+            "delly_token": ""
+        }
         self.config.register_user(**default_user)
+        self.config.register_global(**default_global)
         self.bot.topgg_webhook = topgg.WebhookManager(self.bot).dbl_webhook(
             "/dblwebhook", "password"
         )
@@ -74,6 +82,85 @@ class Dbl(commands.Cog):
     @commands.group()
     async def dbl(self, ctx: commands.Context):
         """Discord bot list commands"""
+
+    @commands.group()
+    async def token(self, ctx: commands.Context):
+        """Token commands"""
+
+    @commands.commands(name="dbl")
+    async def dbl_token(self, ctx: commands.Context, new_token: str):
+        """
+        Set the discordbotlist.com token
+        """
+        self.config.dbl_token.set("new_token")
+        try:
+            await ctx.author.send(
+                f"The discordbotlist.com token has been set to {new_token}"
+            )
+        except discord.Forbidden:
+            await ctx.send(
+                f"The discordbotlist.com token has been set to {new_token}"
+            )
+
+    @commands.commands(name="topgg")
+    async def topgg_token(self, ctx: commands.Context, new_token: str):
+        """
+        Set the top.gg token
+        """
+        self.config.top_token.set("new_token")
+        try:
+            await ctx.author.send(
+                f"The top.gg token has been set to {new_token}"
+            )
+        except discord.Forbidden:
+            await ctx.send(
+                f"The top.gg token has been set to {new_token}"
+            )
+
+    @commands.commands(name="bfd")
+    async def bfd_token(self, ctx: commands.Context, new_token: str):
+        """
+        Set the botsfordiscord.com token
+        """
+        self.config.bfd_token.set("new_token")
+        try:
+            await ctx.author.send(
+                f"The botsfordiscord.com token has been set to {new_token}"
+            )
+        except discord.Forbidden:
+            await ctx.send(
+                f"The botsfordiscord.com token has been set to {new_token}"
+            )
+
+    @commands.commands(name="fate")
+    async def fate_token(self, ctx: commands.Context, new_token: str):
+        """
+        Set the fate token
+        """
+        self.config.fate_token.set("new_token")
+        try:
+            await ctx.author.send(
+                f"The fateslist token has been set to {new_token}"
+            )
+        except discord.Forbidden:
+            await ctx.send(
+                f"The fateslist token has been set to {new_token}"
+            )
+
+    @commands.commands(name="delly")
+    async def delly_token(self, ctx, new_token: str):
+        """
+        Set the delly token
+        """
+        self.config.delly_token.set("new_token")
+        try:
+            await ctx.author.send(
+                f"The delly token has been set to {new_token}"
+            )
+        except discord.Forbidden:
+            await ctx.send(
+                f"The delly token has been set to {new_token}"
+            )
 
     @dbl.group()
     async def fate(self, ctx: commands.Context):

@@ -9,12 +9,6 @@ from discord import embeds
 import aiohttp
 import discord
 
-dbl_token = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0IjoxLCJpZCI6Ijc2Mjk3NjY3NDY1OTY5NjY2MCIsImlhdCI6MTY0MDA2NzI4Mn0.2c6zbaShBL5ye0vePTZQalzupXB1D4guhqwRP9ADqrE"
-top_token = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6Ijc2Mjk3NjY3NDY1OTY5NjY2MCIsImJvdCI6dHJ1ZSwiaWF0IjoxNjQwMDY3NDY1fQ.PXiYoCizEdL_EXDog0vCmQW526t-7mdQihoNNCIedEY"
-bfd_token = "43be749a5673f3d4575f98859706305a02adb1ddd6ebf52a82474b5db9d79d4668472566448f72dea44db127b6c56bab485b51972c692330ce58a7a3f097b531"
-fate_token = "u2ZTyWa51Wpf5pJkjTLku3kws9djxn3MVtJZuoYOoYBSo8RIeXvldmmAt1tMWk1L3DhgF7b6Ec0rw4QgJ56n1bHGm2fTQ2AdkUkUAtBZ4g4OYhedScf3ZVtcqLJR78zMHe2p"
-delly_token = "DELAPI_51d2b12f89ba42f76abcdd33c24a155c-762976674659696660"
-
 
 def get_user(user: Union[int, discord.Member], ctx=None):
     if isinstance(user, int):
